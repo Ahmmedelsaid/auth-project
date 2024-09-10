@@ -32,7 +32,12 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/styles.scss",
+              "node_modules/primeng/resources/themes/saga-blue/theme.css",
+              "node_modules/primeng/resources/primeng.min.css",
+              "node_modules/primeicons/primeicons.css",
+              "./src/assets/scss/config/material/app.scss"
             ],
             "scripts": [],
             "server": "src/main.server.ts",
@@ -103,5 +108,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "e4f7da1f-6561-474b-a388-60fcfbe539f9"
   }
 }

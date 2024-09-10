@@ -1,0 +1,138 @@
+// .auth-page-wrapper{
+//     background-color: #f2f2f7;
+//     .auth-page-content{
+//         padding-bottom: 30px;
+//         position: relative;
+//         z-index: 2;
+//         width: 100%;
+//     }
+//     .footer{
+//         left: 0;
+//         background-color: transparent;
+//         color: gray;
+//     }
+// }
+
+// .auth-one-bg-position{
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     width: 100%;
+//     height: 380px;
+    
+//     @media (max-width: 575.98px) {
+//         height: 280px;
+//     }
+// }
+
+// .auth-one-bg{
+//     background-image: url("../../../assets/images/auth-one-bg.jpg");
+//     background-position: center;
+//     background-size: cover;
+
+//     .bg-overlay{
+//         // background-color: linear-gradient(to right, indigo, 6%, indigo) !important;
+//         opacity: 0.9;
+//         background-color: black !important;
+//     }
+// }
+
+// .shape{
+//     position: absolute;
+//     bottom: 0;
+//     right: 0;
+//     left: 0;
+//     z-index: 1;
+//     pointer-events: none;
+//     >svg {
+//         width: 100%;
+//         height: auto;
+//         fill: #f2f2f7;
+//     }
+// }
+
+// // auth-pass-inputgroup
+
+// .auth-pass-inputgroup{
+//     input[type="text"] + .btn .ri-eye-fill{
+//         &:before{
+//             content: "\ecb6";
+//         }
+//     }
+// }
+
+// .particles-js-canvas-el{
+//     position: relative;
+// }
+
+// // signin card title
+
+// .signin-other-title{
+//     position: relative;
+//     &:after{
+//         content: "";
+//         position: absolute;
+//         width: 100%;
+//         height: 1px;
+//         left: 0;
+//         right: 0;
+//         border-top: 1px dashed gray;
+//         top: 10px;
+//     }
+
+//     .title{
+//         display: inline-block;
+//         position: relative;
+//         z-index: 9;
+//         background-color: white;
+//         padding: 2px 16px;
+//     }
+// }
+
+// // Auth cover
+
+// .auth-bg-cover{
+//     background: linear-gradient(-45deg, indigo 50%, green);
+
+//     > .bg-overlay{
+//         background-image: url("../../../assets/images/cover-pattern.png");
+//         background-position: center;
+//         background-size: cover;
+//         opacity: 1;
+//         background-color: transparent;
+//     }
+
+//     .footer{
+//         color: rgba(white, .5);
+//     }
+// }
+
+// //passowrd validations 
+// #password-contain {
+//     display: none;
+
+//     p {
+//         padding-left: 13px;
+
+//         &.valid {
+//             color: green;
+
+//             &::before {
+//                 position: relative;
+//                 left: -8px;
+//                 content: "✔";
+//             }
+//         }
+
+//         &.invalid {
+//             color: red;
+
+//             &::before {
+//                 position: relative;
+//                 left: -8px;
+//                 content: "✖";
+//             }
+//         }
+//     }
+// }
