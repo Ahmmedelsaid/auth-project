@@ -19,15 +19,15 @@ export class ForgotPasswordComponent implements OnInit {
   fieldTextType!: boolean;
   returnUrl!: string;
   year: number = new Date().getFullYear();
-  // otpDisplay : boolean = false
-  // otpConfig = {
-  //   length: 4,
-  //   allowNumbersOnly: true,
-  //   autoFocus: true,
-  //   // placeholder: '_'
-  // };
+  otpDisplay : boolean = false;
+  otpConfig = {
+    length: 4,
+    allowNumbersOnly: true,
+    autoFocus: true,
+    // placeholder: '_'
+  };
 
-  // otp: string = '';
+  otp: string = '';
 
   constructor(private formBuilder: UntypedFormBuilder,
     private httpClient : HttpClient,
@@ -57,7 +57,7 @@ export class ForgotPasswordComponent implements OnInit {
           }
           else{
             this.toaster.success(response.data)
-            // this.otpDisplay= true
+            this.otpDisplay= true
             // this.passresetForm.reset()
             console.log(response)
           }        },
@@ -68,13 +68,32 @@ export class ForgotPasswordComponent implements OnInit {
     }
   }
 
-  // onOtpChange(otp: string) {
-  //   this.otp = otp;
-  //   console.log('Current OTP:', this.otp);
-  // }
+  onOtpChange(otp: string) {
+    this.otp = otp;
+    console.log('Current OTP:', this.otp);
+  }
 
-  // Submit() {
-  //   console.log('Submitted OTP:', this.otp);
-  // }
+  Submit() {
+    console.log('Submitted OTP:', this.otp);
+    console.log(this.passresetForm)
+    let payload={
+      otp: this.otp,
+      email: this.passresetForm.value.email
+    }
+    this.httpClient.post('https://api-takaa.mgicsolutions.com/api/admin/v1/verify-otp', payload)
+    .subscribe({
+      next: (response : any) => {
+        if(response.status === 401){
+          this.toaster.error(response.msg)
+        }
+        else{
+          this.toaster.success(response.data)
+        }        },
+      error: (err) => {
+        console.error('Login error', err);
+      }
+    });
+
+  }
 
 }
